@@ -1,0 +1,33 @@
+{
+  "name": "ekvio-dev/meta-php-sdk",
+  "description": "Ekvio meta PHP SDK",
+  "type": "project",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Vuylov Dmitry",
+      "email": "vuylov.dmitry@e-queo.com"
+    }
+  ],
+  "require": {
+    "php": "^8",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^7.0",
+    "webmozart/assert": "^1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ekvio\\Meta\\Sdk\\": "src/",
+      "Ekvio\\Meta\\Sdk\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  }
+}
