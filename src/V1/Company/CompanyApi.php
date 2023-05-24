@@ -20,13 +20,11 @@ class CompanyApi implements Company
     }
     public function search(CompanySearchCriteria $criteria): array
     {
-        $response = $this->metaClient->request(
+        return $this->metaClient->cursorRequest(
             $criteria->method(),
             self::COMPANIES_SEARCH_ENDPOINT,
             $criteria->queryParams(),
             $criteria->body()
         );
-
-        return $response['data'];
     }
 }

@@ -20,13 +20,11 @@ class UserApi implements User
     }
     public function search(UserSearchCriteria $criteria): array
     {
-        $response = $this->metaClient->request(
+        return $this->metaClient->cursorRequest(
             $criteria->method(),
             self::USERS_SEARCH_ENDPOINT,
             $criteria->queryParams(),
             $criteria->body()
         );
-
-        return $response['data'];
     }
 }
